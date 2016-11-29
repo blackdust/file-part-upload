@@ -1,6 +1,6 @@
 module FilePartUpload
   class FileEntitiesController < FilePartUpload::ApplicationController
-    skip_before_filter :verify_authenticity_token, :only => [:upload]
+    # skip_before_filter :verify_authenticity_token, :only => [:upload]
 
     def uptoken
       put_policy = Qiniu::Auth::PutPolicy.new(FilePartUpload.get_qiniu_bucket)
