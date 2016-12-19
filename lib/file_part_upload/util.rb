@@ -61,7 +61,8 @@ module FilePartUpload
       end
 
       _, result = Qiniu::Fop::Persistance.pfop( params )
-
+      p "=============================>"
+      p  result
       return result["persistentId"]
     end
 

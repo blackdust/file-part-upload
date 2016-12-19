@@ -153,7 +153,7 @@ module FilePartUpload
       video_height   = options[:video_height]
       video_bit_rate = options[:video_bit_rate]
       audio_bit_rate = options[:audio_bit_rate]
-      resolution     = "#{video_width}x#{video_height}_#{video_bit_rate}_#{audio_bit_rate}"
+      resolution     = "#{video_width}x#{video_height}"
 
       fops = "avthumb/mp4/vcodec/libx264/vb/#{video_bit_rate}/r/24/s/#{resolution}/autoscale/1/acodec/libfdk_aac/audioProfile/aac_he/ab/#{audio_bit_rate}/ar/44100"
       transcode_key = File.join(transcode_file_path, "#{resolution}.mp4")
